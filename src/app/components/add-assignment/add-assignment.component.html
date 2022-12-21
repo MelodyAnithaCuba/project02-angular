@@ -1,0 +1,50 @@
+<div class="card mt-5">
+  <div class="card-body">
+      <h4 class="text-center">Asignacion de articulos</h4>
+      <form #assigmentForm="ngForm" (ngSubmit)="onSubmit(assigmentForm)">
+          <input type="hidden" name="id" [(ngModel)]="assignmentService.selectAssignment.id">
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" name="Linea_de_Carrera"
+            [(ngModel)]="assignmentService.selectAssignment.race_line"
+              placeholder="linea_De_Carrera">
+          </div>
+          <div class="form-group mb-3">
+              <input type="text" class="form-control" name="date"
+              [(ngModel)]="assignmentService.selectAssignment.date"
+               placeholder="Fecha">
+          </div>
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" name="tipo"
+            [(ngModel)]="assignmentService.selectAssignment.type"
+              placeholder="Tipo">
+          </div>
+           <div class="form-group mb-3">
+            <input type="text" class="form-control" name="estudiante"
+            [(ngModel)]="assignmentService.selectAssignment.student"
+              placeholder="Estudiante">
+          </div>
+           <div class="form-group mb-3">
+            <input type="text" class="form-control" name="documento"
+            [(ngModel)]="assignmentService.selectAssignment.document"
+              placeholder="Documento">
+          </div>
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" name="nota"
+            [(ngModel)]="assignmentService.selectAssignment.note"
+              placeholder="Nota">
+          </div>
+          <div class="form-group ">
+            <button class="btn btn-primary me-2" type="submit">
+                <i class="fas fa-plus-circle" ></i> Agregar
+            </button>
+            <button class="btn btn-secondary me-2" type="reset" (click)="resetForm(assigmentForm)">
+                <i class="fas fa-sync-alt"></i> Resetear
+            </button>
+            <button class="btn btn-secondary" type="button" routerLink="/assigment">
+              <i class="fas fa-hand-point-left"></i> Cancelar
+          </button>
+          </div>
+        </form>
+  </div>
+</div>
+
